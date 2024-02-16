@@ -15,7 +15,7 @@ function App() {
      <SelectedContact selectedContactId={selectedContactId} 
         setSelectedContactId={setSelectedContactId}/>) 
      : (
-        <ContactList />
+        <ContactList setSelectedContactId={setSelectedContactId} />
       )}
     </>
   )

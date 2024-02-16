@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 export default function ContactRow({setSelectedContactId, contact}) { 
+    // console.log(setSelectedContactId)
     return (
         <tr onClick={() => {
             setSelectedContactId(contact.id);

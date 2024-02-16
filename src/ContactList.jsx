@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // import React from "react";
 import ContactRow from "./ContactRow";
+
 import { useState, useEffect } from "react";
 
 // const dummyContacts = [
@@ -9,7 +10,7 @@ import { useState, useEffect } from "react";
 //     { id: 3, name: "BB-8", phone: "888-888-8888", email: "bb8@droids.com" },
 // ];
 
-export default function ContactList() { 
+export default function ContactList({setSelectedContactId}) { 
 
     const [contacts, setContacts] = useState();
     // console.log("Contacts: ", contacts);
@@ -49,7 +50,7 @@ export default function ContactList() {
                 contacts.map((contact) => {
                     return <ContactRow 
                     key={contact.id} 
-                    setSelectedContactId={setContacts}
+                    setSelectedContactId={setSelectedContactId}
                     contact={contact} />
                 })
             }
